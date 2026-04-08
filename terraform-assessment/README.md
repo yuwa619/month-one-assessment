@@ -80,7 +80,6 @@ terraform init
 terraform plan
 ```
 
-Take a screenshot of the output — this is required as deployment evidence.
 
 ### 5. Apply (deploy the infrastructure)
 
@@ -89,7 +88,6 @@ terraform apply
 ```
 
 Type `yes` when prompted. Deployment takes about 3–5 minutes.  
-Take a screenshot when it completes showing `Apply complete!`.
 
 After apply, note the outputs printed to your terminal:
 - `alb_dns_name` — paste this in a browser to reach the web app
@@ -144,22 +142,6 @@ psql -U techcorp -d techcorp_db -h localhost
 
 ---
 
-## Evidence Checklist (Screenshots Required)
-
-Place all screenshots in the `evidence/` folder at the repository root.
-
-| # | Screenshot | File name suggestion |
-|---|---|---|
-| 1 | `terraform plan` output in terminal | `01_terraform_plan.png` |
-| 2 | `terraform apply` completion (`Apply complete! Resources: N added`) | `02_terraform_apply.png` |
-| 3 | AWS Console — VPC and subnets | `03_aws_vpc.png` |
-| 4 | AWS Console — EC2 instances (bastion, web ×2, db) | `04_aws_ec2_instances.png` |
-| 5 | AWS Console — Load Balancer and target group (both targets healthy) | `05_aws_alb.png` |
-| 6 | Browser showing ALB URL serving the web page (instance ID visible) | `06_alb_web_page.png` |
-| 7 | SSH session into bastion host | `07_ssh_bastion.png` |
-| 8 | SSH from bastion to a web server | `08_ssh_web_server.png` |
-| 9 | SSH from bastion to the DB server | `09_ssh_db_server.png` |
-| 10 | psql session connected to techcorp_db on the DB server | `10_postgres_connection.png` |
 
 ---
 
