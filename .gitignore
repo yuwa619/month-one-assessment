@@ -1,0 +1,9 @@
+# Terraform — never commit real variable values or local state cache
+terraform.tfvars
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.backup
+
+# OS clutter
+.DS_Store
+Thumbs.db

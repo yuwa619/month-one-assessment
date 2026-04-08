@@ -1,0 +1,14 @@
+# Copy this file to terraform.tfvars and fill in your real values.
+# Never commit terraform.tfvars to version control.
+
+region                = "us-east-1"
+
+# Your current public IP (run: curl -s ifconfig.me)
+admin_ip              = "203.0.113.10"
+
+# Name of an existing EC2 key pair in your AWS account
+key_pair_name         = "my-key-pair"
+
+bastion_instance_type = "t3.micro"
+web_instance_type     = "t3.micro"
+db_instance_type      = "t3.small"
